@@ -35,6 +35,7 @@ public class BatchJobListener extends JobExecutionListenerSupport {
 			File file =null;
 			String fileName = System.getProperty("user.dir") + env.getProperty("filePath");
 			
+			logger.info("File path is {}", fileName);
 			try
 				{
 					if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
@@ -43,12 +44,12 @@ public class BatchJobListener extends JobExecutionListenerSupport {
 						file = new File(fileName);
 						if (file!=null && file.exists())
 						{
-							file.renameTo(new File(System.getProperty("user.dir") + "/wardIssue_"+ new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss").format(new Date().getTime()).toString() +"_completed"));
+							String renameFile = System.getProperty("user.dir") + "/wardIssue_"+ new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss").format(new Date().getTime()).toString() +"_completed";
+							logger.info("File being renamed to {}", renameFile);
+							file.renameTo(new File(renameFile));
 						}
 						logger.info("Batch job completed successfully");;
-					}
-					logger.info ("AfterJob ends renaming from {} to {} successfully", jobExecution.getJobId().toString(),
-							this.getClass().getSimpleName());		
+					}	
 				}
 			catch(Exception ex)
 			{
