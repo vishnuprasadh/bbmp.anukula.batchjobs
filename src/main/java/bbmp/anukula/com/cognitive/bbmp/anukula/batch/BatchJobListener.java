@@ -47,6 +47,7 @@ public class BatchJobListener extends JobExecutionListenerSupport {
 							String renameFile = System.getProperty("user.dir") + "/wardIssue_"+ new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss").format(new Date().getTime()).toString() +"_completed";
 							logger.info("File being renamed to {}", renameFile);
 							file.renameTo(new File(renameFile));
+							
 						}
 						logger.info("Batch job completed successfully");;
 					}	
