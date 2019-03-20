@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
@@ -37,7 +38,11 @@ public class BatchScheduler {
 	public void runJob() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException
 	{
 		logger.info("Into job execution initialization");
-		launcher.run(processJob, new JobParametersBuilder().addDate("launchDate", new Date() ).toJobParameters());
+		
+		JobParametersBuilder paramBuilder = new JobParametersBuilder();
+		paramBuilder.addDate("launchDate", new Date());
+		
+		launcher.run(processJob, paramBuilder.toJobParameters());
 		logger.info("Completed job execution initialization");
 	}
 	

@@ -51,7 +51,6 @@ public class BatchJobEngine  {
 	@Value("${wardIssueUpdate}")private String baseIssueUpdateURL;
 	@Value("${userAgent}") private String userAgent;
 	
-	
 	@Bean
 	public BatchJobItemWriter<WardIssue> itemWriter()
 	{
@@ -70,9 +69,8 @@ public class BatchJobEngine  {
 	@Bean
 	public FlatFileItemReader<WardIssue> itemReader() throws MalformedURLException
 	{
-		String localfile;
 		this.executionPath = System.getProperty("user.dir");
-		localfile =  executionPath + filePath ;
+		String  localFile =  executionPath + filePath ;
 		
 		File file = new File(filePath);
 		Boolean canExecute = file.canExecute();
@@ -80,7 +78,7 @@ public class BatchJobEngine  {
 		FlatFileItemReader<WardIssue> reader = new FlatFileItemReader<WardIssue>();
 		reader.setStrict(false);
 		
-			UrlResource urlResource = new UrlResource("file:"+localfile);
+			UrlResource urlResource = new UrlResource("file:"+ localFile);
 			reader.setResource(urlResource);
 			
 		
