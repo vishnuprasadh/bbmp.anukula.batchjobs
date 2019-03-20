@@ -1,1 +1,1 @@
-worker: java -Dserver.port=8085 $JAVA_OPTS -jar target/com.cognitive.bbmp.anukula.batch-0.0.1-SNAPSHOT.jar
+worker: java -Dserver.port=9002 $JAVA_OPTS -jar target/com.cognitive.bbmp.anukula.batch-0.0.1-SNAPSHOT.jar
