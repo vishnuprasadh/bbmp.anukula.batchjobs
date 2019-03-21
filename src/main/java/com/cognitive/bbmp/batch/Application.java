@@ -1,4 +1,4 @@
-/*package com.cognitive.bbmp.wardIssuebatchjob;
+package com.cognitive.bbmp.batch;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
@@ -6,11 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableBatchProcessing
 @SpringBootApplication
-public class BatchschedulerdemoApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BatchschedulerdemoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
-*/

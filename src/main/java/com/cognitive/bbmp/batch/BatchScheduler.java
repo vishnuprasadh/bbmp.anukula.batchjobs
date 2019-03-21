@@ -1,4 +1,4 @@
-package bbmp.anukula.com.cognitive.bbmp.anukula.batch;
+package com.cognitive.bbmp.batch;
 import java.util.Date;
 
 import org.slf4j.Logger;

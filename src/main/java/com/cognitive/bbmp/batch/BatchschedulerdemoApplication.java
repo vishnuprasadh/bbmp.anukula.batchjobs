@@ -1,4 +1,5 @@
-package bbmp.anukula.com.cognitive.bbmp.anukula.batch;
+package com.cognitive.bbmp.batch;
+/*package com.cognitive.bbmp.wardIssuebatchjob;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
@@ -6,10 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableBatchProcessing
 @SpringBootApplication
-public class Application {
+public class BatchschedulerdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(BatchschedulerdemoApplication.class, args);
 	}
 
 }
+*/

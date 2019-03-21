@@ -1,4 +1,4 @@
-package bbmp.anukula.com.cognitive.bbmp.anukula.batch;
+package com.cognitive.bbmp.batch;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;

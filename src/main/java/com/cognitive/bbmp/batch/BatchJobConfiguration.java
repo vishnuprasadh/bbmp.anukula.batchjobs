@@ -1,4 +1,4 @@
-package bbmp.anukula.com.cognitive.bbmp.anukula.batch;
+package com.cognitive.bbmp.batch;
 import org.springframework.batch.core.launch.support.SimpleJobLauncher;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean;

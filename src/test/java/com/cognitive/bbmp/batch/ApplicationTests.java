@@ -1,4 +1,4 @@
-package bbmp.anukula.com.cognitive.bbmp.anukula.batch;
+package com.cognitive.bbmp.batch;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
